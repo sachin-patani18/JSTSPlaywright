@@ -1,8 +1,0 @@
-target/
-.tools/
-.idea/
-.vscode/
-*.iml
-*.log
-test-output/
-.DS_Store
