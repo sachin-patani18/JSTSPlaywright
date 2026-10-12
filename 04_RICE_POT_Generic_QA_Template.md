@@ -1,4 +1,4 @@
-Generic RICE POT Template for QA
+Generic RICE POT Template for QA -change
 Use this prompt template for general QA tasks, test plans, test cases, and automation. Replace the editable fields, select one task profile, and keep the workflow that fits your request.
 
 RICE POT means Role, Instructions, Context, Example, Parameters, Output, and Tone.
