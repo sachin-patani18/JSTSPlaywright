@@ -1,6 +1,6 @@
-# Test Plans
+# Draft Test Plans
 
-This folder contains the Salesforce production sign-in test plan in editable Markdown and PDF formats.
+This folder contains a draft Salesforce production sign-in test plan in editable Markdown and PDF formats. It is a planning artifact, not a record of test execution or verified Salesforce behavior.
 
 ## Salesforce login and logout plan
 
@@ -11,4 +11,4 @@ The plan covers username/password sign-in, invalid credentials and required fiel
 
 ## Review before execution
 
-The plan is a draft for stakeholder review, not an execution report. Its local coverage objectives and exit criteria are proposed; formal requirements, exact error messages, account policies, test-account details, environment versions, test dates, owners, and approvals remain to be confirmed. Production execution requires explicit authorization and an approved test window. Lockout testing must not be performed without an approved policy, a designated test account, and a reset procedure.
+The plan is for stakeholder review, not an execution report. Its local coverage objectives and exit criteria are proposed; formal requirements, exact error messages, account policies, test-account details, environment versions, test dates, owners, and approvals remain to be confirmed. Production execution requires explicit authorization and an approved test window. Lockout testing must not be performed without an approved policy, a designated test account, and a reset procedure.

@@ -7,7 +7,7 @@
 ![Reports](https://img.shields.io/badge/Reporting-ExtentReports%205-purple)
 ![CI/CD](https://img.shields.io/badge/CI%2FCD-GitHub%20Actions-black)
 
-A production-grade, enterprise-level test automation framework designed following senior SDET industry standards and the **RICE-POT Prompt Engineering methodology**. Built specifically for complex web ecosystems (such as Enterprise CRM platforms like Salesforce, HubSpot, and ServiceNow).
+A Java-based web test automation framework using Selenium WebDriver, TestNG, and the Page Object Model. Its sample page objects and tests demonstrate CRM-style login and lead-management flows. The repository also includes RICE-POT prompt-engineering references; the framework itself is not tied to that methodology.
 
 ---
 
@@ -16,7 +16,7 @@ A production-grade, enterprise-level test automation framework designed followin
 - **Thread-Safe Concurrency**: Strict browser isolation using `ThreadLocal<WebDriver>` enabling multi-threaded parallel execution across classes, methods, and browsers without collision.
 - **Fluent Page Object Model (POM)**: High-cohesion, loosely-coupled Page Objects with method chaining for clean, readable test flows.
 - **Selenium 4 Native Manager**: Automatic browser driver management for Chrome, Firefox, and Edge with zero third-party binary friction.
-- **Dynamic Multi-Environment Support**: Multi-tier configuration files (`config.properties`, `qa-config.properties`, `stage-config.properties`) with runtime CLI overrides.
+- **Environment Configuration**: Default, QA, and staging property files (`config.properties`, `qa-config.properties`, `stage-config.properties`) with runtime CLI overrides.
 - **Observability & Visual Reporting**: Integrated **ExtentReports 5** with automatic Base64 screenshot capture on failure, category tags, author tagging, and **Log4j2** colored logs.
 - **Smart Failure Resilience**: Automatic test retries for transient failures via TestNG `IRetryAnalyzer` dynamically registered through `IAnnotationTransformer`.
 - **Synthetic Data Generation**: In-memory synthetic CRM data generation powered by `DataFaker` (names, emails, phone numbers, companies).
@@ -27,7 +27,7 @@ graph TD
     B --> C[BaseTest]
     C --> D[DriverManager / ThreadLocal]
     D --> E[DriverFactory: Chrome / Firefox / Edge]
-    C --> F[ConfigReader: QA / Stage / Prod]
+    C --> F[ConfigReader: QA / Stage]
     B --> G[ExtentReports 5 + Base64 Screenshots]
     B --> H[Log4j2 Console + Rolling Files]
     C --> I[Page Object Model: BasePage]
@@ -51,7 +51,7 @@ Selenium_Framework/
 ├── README.md                             # Architectural and operational documentation
 ├── .github/
 │   └── workflows/
-│       └── maven-test.yml                # CI/CD GitHub Actions pipeline definition
+│       └── maven-test.yml                # GitHub Actions Maven test pipeline
 ├── src/
 │   ├── main/
 │   │   ├── java/com/enterprise/framework/
@@ -77,9 +77,9 @@ Selenium_Framework/
 │   │   │       └── WaitUtils.java        # Explicit & fluent synchronization helpers
 │   │   └── resources/
 │   │       ├── config/
-│   │       │   ├── config.properties     # Default global configurations
+│   │       │   ├── config.properties     # Default global configuration (QA by default)
 │   │       │   ├── qa-config.properties  # QA environment endpoints and accounts
-│   │       │   └── stage-config.properties# Staging environment configurations
+│   │       │   └── stage-config.properties# Staging environment configuration
 │   │       └── log4j2.xml                # Logging configuration (Console + Files)
 │   └── test/
 │       ├── java/com/enterprise/framework/
@@ -102,7 +102,7 @@ Selenium_Framework/
 
 ## Prerequisites
 
-- **Java Development Kit (JDK)**: Version 17 LTS or higher (compatible up to JDK 25)
+- **Java Development Kit (JDK)**: Version 17 or higher
 - **Apache Maven**: Version 3.8.0 or higher
 - **Web Browsers**: Google Chrome, Mozilla Firefox, or Microsoft Edge installed
 
@@ -126,7 +126,7 @@ mvn clean test -DsuiteXmlFile=src/test/resources/testng-parallel.xml
 ```
 
 ### 4. Dynamic CLI Parameters
-Override browser, environment, and headless execution flags directly from terminal or CI/CD pipelines:
+Override browser, environment, and headless execution flags directly from a terminal or CI pipeline. The checked-in environment profiles are QA and staging:
 
 ```bash
 # Execute in Firefox on Staging Environment
@@ -148,4 +148,4 @@ mvn clean test -Dbrowser=chrome -Denv=qa -Dheadless=true
 
 ## Continuous Integration (GitHub Actions)
 
-A ready-to-use GitHub Actions workflow is provided at [`.github/workflows/maven-test.yml`](.github/workflows/maven-test.yml). It automatically triggers tests on code commits and pull requests, runs headless Chrome in an Ubuntu container, and uploads HTML execution reports as build artifacts for 14-day retention.
+A GitHub Actions workflow is provided at [`.github/workflows/maven-test.yml`](.github/workflows/maven-test.yml). Review that workflow for its trigger conditions, runner setup, and artifact-retention settings.

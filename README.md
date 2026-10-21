@@ -1,26 +1,29 @@
 # JSTSPlaywright
 
-A learning workspace for JavaScript fundamentals, test automation, and QA prompt engineering. It combines small JavaScript lesson examples with a Selenium-based automation framework and reusable QA planning resources.
+A learning workspace for JavaScript fundamentals, browser test automation, and QA prompt engineering. It brings together standalone JavaScript lessons, a Java/Selenium/TestNG framework, and reusable QA planning resources.
 
-## Project contents
+## JavaScript lessons
 
-### JavaScript lessons
+The lessons are grouped by topic and can be run independently with Node.js:
 
-- `01_chapter_JS_Basics/` — Hello World and basic math.
-- `02_Chapter_JS_Keyword_ldentifire/` — the JavaScript engine, `let`, keywords, identifiers, naming rules, comments, and review questions.
-- `03_chapter_JS_Literals/` — literals, numbers, special values, `null`, and `undefined`.
-- `04_Chapter_JS_Operater/` — assignment, arithmetic, comparison, logical, conditional, and string examples.
+| Folder | Topics |
+| --- | --- |
+| `01_chapter_JS_Basics/` | Hello World and basic math |
+| `02_Chapter_JS_Keyword_ldentifire/` | JavaScript engine, `let`, keywords, identifiers, naming rules, comments, and review questions |
+| `03_chapter_JS_Literals/` | Literals, numbers, special values, `null`, and `undefined` |
+| `04_Chapter_JS_Operater/` | Assignment, arithmetic, comparison, logical, ternary, string, and `typeof` examples |
+| `05_Chapter_JS_Incre_Decre_Op/` | Prefix/postfix increment and decrement, review questions, and nullish coalescing |
 
-### QA and automation resources
-
-- `00_chapter_prompt_Eng/` — RICE-POT prompt-engineering references, a Selenium automation framework, and a Salesforce login test plan. See its [README](00_chapter_prompt_Eng/README.md) for details.
-
-## Running a JavaScript example
-
-Install [Node.js](https://nodejs.org/) and run any lesson file from the repository root:
+Install [Node.js](https://nodejs.org/) and run an example from the repository root:
 
 ```sh
-node 04_Chapter_JS_Operater/27_Srings.js
+node 05_Chapter_JS_Incre_Decre_Op/45_Nullish.js
 ```
 
-Each lesson is a standalone example; choose another `.js` file to explore a different topic.
+Each file is a small, standalone lesson. Run another file to explore a different example.
+
+## QA and automation resources
+
+- [`00_chapter_prompt_Eng/`](00_chapter_prompt_Eng/README.md) — RICE-POT prompt-engineering references, a Java/Selenium automation framework, and a Salesforce login/logout test plan.
+- [`Selenium_Framework/`](00_chapter_prompt_Eng/Selenium_Framework/README.md) — framework prerequisites, configuration, and Maven test commands.
+- [`Testplan/`](00_chapter_prompt_Eng/Testplan/README.md) — editable Salesforce test-plan source and PDF.
