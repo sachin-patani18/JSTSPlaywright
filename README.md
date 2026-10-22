@@ -13,6 +13,9 @@ The lessons are grouped by topic and can be run independently with Node.js:
 | `03_chapter_JS_Literals/` | Literals, numbers, special values, `null`, and `undefined` |
 | `04_Chapter_JS_Operater/` | Assignment, arithmetic, comparison, logical, ternary, string, and `typeof` examples |
 | `05_Chapter_JS_Incre_Decre_Op/` | Prefix/postfix increment and decrement, review questions, and nullish coalescing |
+| `06_Chapter_If_Else_Statement_Condition/` | Conditional statements, nested conditions, and multiple `if`/`else` branches |
+| `07_Chapter_Switch/` | `switch` statements, grouped cases, and review questions |
+| `08_Chapter_UserInput/` | Browser and Node.js user input, synchronous prompts, and reading files with Node.js |
 
 Install [Node.js](https://nodejs.org/) and run an example from the repository root:
 
