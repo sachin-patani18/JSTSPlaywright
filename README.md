@@ -16,6 +16,9 @@ The lessons are grouped by topic and can be run independently with Node.js:
 | `06_Chapter_If_Else_Statement_Condition/` | Conditional statements, nested conditions, and multiple `if`/`else` branches |
 | `07_Chapter_Switch/` | `switch` statements, grouped cases, and review questions |
 | `08_Chapter_UserInput/` | Browser and Node.js user input, synchronous prompts, and reading files with Node.js |
+| `09_Chapter_Loops/` | Loop fundamentals, `for` loops, and review questions |
+| `10_Chapter_Loop_While/` | `while` loops, `break`, and review questions |
+| `11_Chapter_Do_While_Loop/` | `do...while` loops, comparisons with `while`, nested loops, and review questions |
 
 Install [Node.js](https://nodejs.org/) and run an example from the repository root:
 
