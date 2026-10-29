@@ -19,7 +19,7 @@ The lessons are grouped by topic and can be run independently with Node.js:
 | `09_Chapter_Loops/` | Loop fundamentals, `for` loops, and review questions |
 | `10_Chapter_Loop_While/` | `while` loops, `break`, and review questions |
 | `11_Chapter_Do_While_Loop/` | `do...while` loops, comparisons with `while`, nested loops, and review questions |
-| `12_Chapter_Arrays/` | Creating arrays, accessing and modifying elements, adding and removing values, searching, finding, and iterating with loops and array methods |
+| `12_Chapter_Arrays/` | Creating and modifying arrays, adding and removing values, searching and finding, iteration, transformations, sorting, slicing, concatenation, checks, copying, destructuring and spread, and swapping |
 
 Install [Node.js](https://nodejs.org/) and run an example from the repository root:
 
