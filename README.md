@@ -11,7 +11,7 @@ The lessons are grouped by topic and can be run independently with Node.js:
 | `01_chapter_JS_Basics/` | Hello World and basic math |
 | `02_Chapter_JS_Keyword_ldentifire/` | JavaScript engine, `let`, keywords, identifiers, naming rules, comments, and review questions |
 | `03_chapter_JS_Literals/` | Literals, numbers, special values, `null`, and `undefined` |
-| `04_Chapter_JS_Operater/` | Assignment, arithmetic, comparison, logical, ternary, string, and `typeof` examples |
+| `04_Chapter_JS_Operater/` | Assignment, arithmetic, comparison, logical, ternary (including nested ternary), string, and `typeof` examples |
 | `05_Chapter_JS_Incre_Decre_Op/` | Prefix/postfix increment and decrement, review questions, and nullish coalescing |
 | `06_Chapter_If_Else_Statement_Condition/` | Conditional statements, nested conditions, and multiple `if`/`else` branches |
 | `07_Chapter_Switch/` | `switch` statements, grouped cases, and review questions |
@@ -19,7 +19,7 @@ The lessons are grouped by topic and can be run independently with Node.js:
 | `09_Chapter_Loops/` | Loop fundamentals, `for` loops, and review questions |
 | `10_Chapter_Loop_While/` | `while` loops, `break`, and review questions |
 | `11_Chapter_Do_While_Loop/` | `do...while` loops, comparisons with `while`, nested loops, and review questions |
-| `12_Chapter_Arrays/` | Creating and modifying arrays, adding and removing values, searching and finding, iteration, transformations, sorting, slicing, concatenation, checks, copying, destructuring and spread, and swapping |
+| `12_Chapter_Arrays/` | Creating and modifying arrays, adding and removing values, searching and finding, iteration, transformations, sorting, slicing, concatenation, checks, copying, destructuring and spread, and swapping. See the [lexicographic sorting notes](12_Chapter_Arrays/91_Laxicographic_example.md) and [array slicing guide](12_Chapter_Arrays/93_Slice_Example.md). |
 
 Install [Node.js](https://nodejs.org/) and run an example from the repository root:
 
